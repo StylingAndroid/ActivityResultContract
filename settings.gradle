@@ -1,0 +1,2 @@
+rootProject.name = "Activity Result Contract"
+include ':app'

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Activity Result Contract</string>
+    <string name="permission_granted">Permission Granted</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="permission_rationale">Permission rationale</string>
+    <string name="button_ok">OK</string>
+    <string name="dialog_title">Missing permission</string>
+    <string name="dialog_message">Rationale for missing permission</string>
+    <string name="button_cancel">Cancel</string>
+</resources>

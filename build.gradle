@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath BuildPlugins.androidGradlePlugin
+        classpath BuildPlugins.kotlinGradlePlugin
+        classpath BuildPlugins.hiltAndroidPlugin
+
+        classpath BuildPlugins.versionsPlugin
+        classpath BuildPlugins.detektPlugin
+        classpath BuildPlugins.ktlintPlugin
+        classpath BuildPlugins.canidropjetifierPlugin
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21'
+    }
+}
+
+subprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    apply plugin: BuildPlugins.versions
+    apply plugin: BuildPlugins.ktlint
+    apply plugin: BuildPlugins.detekt
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

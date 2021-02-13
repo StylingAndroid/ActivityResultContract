@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/missingPermissionsFragment">
+
+    <fragment
+        android:id="@+id/grantedPermissionsFragment"
+        android:name="com.stylingandroid.activityresultcontract.GrantedPermissionsFragment"
+        android:label="fragment_granted_permissions"
+        tools:layout="@layout/fragment_granted_permissions" />
+    <fragment
+        android:id="@+id/missingPermissionsFragment"
+        android:name="com.stylingandroid.activityresultcontract.MissingPermissionsFragment"
+        android:label="fragment_missing_permissions"
+        tools:layout="@layout/fragment_missing_permissions" />
+</navigation>
