@@ -9,13 +9,11 @@ buildscript {
     dependencies {
         classpath BuildPlugins.androidGradlePlugin
         classpath BuildPlugins.kotlinGradlePlugin
-        classpath BuildPlugins.hiltAndroidPlugin
 
         classpath BuildPlugins.versionsPlugin
         classpath BuildPlugins.detektPlugin
         classpath BuildPlugins.ktlintPlugin
         classpath BuildPlugins.canidropjetifierPlugin
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21'
     }
 }
 
