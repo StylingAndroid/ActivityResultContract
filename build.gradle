@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath BuildPlugins.androidGradlePlugin
         classpath BuildPlugins.kotlinGradlePlugin
+        classpath BuildPlugins.hiltAndroidPlugin
 
         classpath BuildPlugins.versionsPlugin
         classpath BuildPlugins.detektPlugin

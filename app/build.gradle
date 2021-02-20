@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 android {
     compileSdkVersion AndroidSdk.compile
@@ -37,6 +39,10 @@ dependencies {
     implementation Libraries.constraintLayout
     implementation Libraries.navigationFragment
     implementation Libraries.navigationUi
+    implementation Libraries.hilt
+    implementation Libraries.hiltLifecycleViewmodel
+    kapt Libraries.hiltAndroidCompiler
+    kapt Libraries.hiltCompiler
 }
 
 detekt {

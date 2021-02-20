@@ -7,12 +7,51 @@
     tools:context=".GrantedPermissionsFragment">
 
     <TextView
+        android:id="@+id/main_permission"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/permission_granted"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/request_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/request_secondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/request_secondary_permission"
+        app:layout_constraintBottom_toTopOf="@id/secondary_permission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_permission" />
+
+    <TextView
+        android:id="@+id/secondary_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/request_external"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/request_secondary" />
+
+    <Button
+        android:id="@+id/request_external"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/request_external_permission"
+        app:layout_constraintBottom_toTopOf="@id/external_permission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/secondary_permission" />
+
+    <TextView
+        android:id="@+id/external_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/request_external" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
